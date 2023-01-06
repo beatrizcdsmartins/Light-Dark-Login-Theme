@@ -25,7 +25,7 @@ mode.addEventListener ('click', () =>{
 
 // Password
 
-eye.addEventListener('click', () =>{
+ eye.addEventListener('click', () =>{
     let inputTypeIsPassword = passwordInput.type === "password" // Variable to help in understanding
 
     //if this ^ true, go to the condition
