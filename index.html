@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
+
+
+    <main id="container">
+        <div class="bubbles">
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:18"></span>
+            <span style="--i:20"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:27"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:3"></span>
+            <span style="--i:10"></span>
+            <span style="--i:22"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:18"></span>
+            <span style="--i:20"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:27"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:18"></span>
+            <span style="--i:14"></span>
+            <span style="--i:10"></span>
+            <span style="--i:13"></span>
+            <span style="--i:27"></span>
+            <span style="--i:3"></span>
+            <span style="--i:21"></span>
+            <span style="--i:26"></span>
+            <span style="--i:10"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:15"></span>
+            <span style="--i:20"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:27"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:3"></span>
+            <span style="--i:10"></span>
+            <span style="--i:22"></span>
+            <span style="--i:14"></span>
+            <span style="--i:10"></span>
+            
+        </div>
+
+        <form id="login-form">
+            <div id="form-header">
+                <h1>Login</h1>
+                <i id="icon" class="fa-solid fa-moon"></i>
+               
+
+            </div>
+
+            <div id="social-media">
+                <a href=""><img src="./assets/icons8-google-logo.svg" alt="google-logo"></a>
+                <a href="https://github.com/beatrizcdsmartins"><img src="./assets/icons8-github (1).svg" alt="gitHub-logo"></a>
+                <a href=""><img src="./assets/icons8-facebook-novo.svg" alt="facebook-logo"></a>
+
+            </div>
+
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="name">
+                        Name:
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" id="name">
+                            <div class="underline"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="name">
+                        E-mail:
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email" id="email">
+                            <div class="underline"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="name">
+                        Password:
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="password" id="password">
+                            <div class="underline"></div>
+                            <img class="eye"width="20px" id="eye"src="./assets/eye-open_icon-icons.com_73576.png" onclick="eyeclick()" alt="">
+                        </div>
+
+                    </label>
+
+                    <div class="forgot">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="login-button">
+               - Login -
+            </button>
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>

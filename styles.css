@@ -1,0 +1,330 @@
+
+
+:root {
+    --light-50: #ffff;
+
+    --dark-50:#C84771;
+    --dark-100: #3c106150;
+    --dark-900: #280B45;
+
+    --change-50: #E26A2C;
+    --change-100:#ffa774;
+    --change-900: #FDA65D;
+  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#container{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width:100%;
+    background: url(./assets/backgroundImg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* BUBLE WING */
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    display: flex;
+
+}
+
+.bubbles span{
+    
+    width: 30px;
+    height: 30px;
+    background: var(--change-100);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(255, 167, 116, 0.5),
+    0 0 50px var(--change-100),
+    0 0 100px var(--change-100) ;
+    animation: bubble-animation calc(180s / var(--i)) linear infinite;
+}  
+
+@keyframes bubble-animation {
+    0%{
+        transform: translateY(100vh) scale(0.2);
+    }
+
+    100%{
+        transform: translateY(-10vh) scale(0.8);
+    }
+    
+}
+
+.bubbles span:nth-of-type(even){ 
+    background: #FFD07F;
+    box-shadow: 0 0 0 10px #FFD07F44,
+    0 0 50px #FFD07F,
+    0 0 100px #FFD07F ;
+}
+
+
+/* LOGIN WING */
+
+
+#login-form{
+    background: #FEF9A795;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap:30px;
+    height: fit-content;
+    animation: d-to-l 0.3s ease-in-out;
+    z-index: 2;
+
+
+}
+
+#form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+#form-header h1::before{
+    position: absolute;
+    content:'';
+    width: 40%;
+    background-color: var(--dark-50);
+    height: 3px;
+    bottom: 5px;
+    border-radius: 5px;
+}
+
+#icon{
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+#social-media{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#form-header h1{
+    font-size: 40px;
+    position: relative;
+
+}
+
+#social-media img:hover{
+    transform: scale(1.2);
+    transition-property:var(width, height);
+    transition-duration: 1s;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.input-box label{
+    font-size: 14px;
+   color:rgb(87, 1, 30);
+   letter-spacing: 1.5px;
+   
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid #D61C4E;
+}
+
+.input-field i{
+    font-size: 18px;
+    color: #000;
+
+}
+
+.input-field input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+   
+
+}
+
+.input-field input:focus{
+    outline: none;
+}
+
+.forgot a{
+    
+    text-decoration: none;
+    font-size: 10px;
+    color: rgb(87, 1, 30, 0.9);
+    letter-spacing: 1px;
+
+}
+
+#login-button{
+    background: #D61C4E99;
+    color: var(--change-100);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition-property:var(width, height);
+    transition-duration: 1s;
+}
+
+
+#login-button:hover{
+    transform: scale(1.05);
+}
+
+
+#login-button:active{
+    background: #D61C4E44;
+}
+
+#password{
+    width: 230px;   
+}
+
+#eye{
+    cursor: pointer;
+    transition-property:var(width, height);
+}
+
+
+
+/* DARK-THEME */
+
+.dark#login-form{
+    color: var(--light-50);
+    background-color: var(--dark-100);
+    animation: l-to-d 0.3s ease-in-out;
+}
+
+.dark#login-form .input-field input,
+.dark#login-form .input-field i,
+.dark#login-form button{
+    color: var(--light-50);
+
+}
+
+.dark#login-form .input-box label,
+.dark#login-form .input-box .forgot a,
+.dark#login-form .input-box label{
+    color: #c0acac;
+
+}
+
+.dark#login-form .input-field img{
+    background-color: var(--light-50);
+    border-radius: 40px;
+}
+
+.dark#container{
+    background: url(./assets/dark-theme-img.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+@keyframes d-to-l {
+    0%{
+        background-color: var(--dark-100);
+    }
+
+    100%{
+        background-color: #FEF9A795;
+    }
+}
+
+@keyframes l-to-d {
+    0%{
+        background-color: #FEF9A795;
+    }
+
+    100%{
+        background-color: var(--dark-100);
+    }
+}
+
+
+
+/* MOBILE VERSION */
+
+
+@media only screen and (max-width:368px){
+
+    #login-form{
+        width: 90vw;
+    }
+
+    .input-box{
+        width: 80%;
+    }
+
+    input{
+        overflow: hidden;
+    }
+
+    .eye{
+        display: none;
+    }
+}
+
+ @media only screen and (min-width:291px) and (max-width:460px) {
+
+    #login-form{
+        width: 90vw;
+    }
+}  
+
+
+
+
+
+
+
