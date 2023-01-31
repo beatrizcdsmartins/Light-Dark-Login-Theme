@@ -31,7 +31,7 @@ body{
     overflow: hidden;
     height: 100vh;
     width:100%;
-    background: url(./assets/backgroundImg.png);
+    background: url(./assets/Desert-Egypt-Vector-Illustration.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -258,7 +258,7 @@ body{
 }
 
 .dark#container{
-    background: url(./assets/dark-theme-img.png);
+    background: url(./assets/Mountains-in-the-night.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
